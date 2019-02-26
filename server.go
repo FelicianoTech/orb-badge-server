@@ -36,6 +36,8 @@ func (s *Server) initialize(certifiedOrbsOnly bool) {
 	s.Router = mux.NewRouter()
 
 	s.Router.HandleFunc("/", s.viewHomepage).Methods("GET")
+	s.Router.HandleFunc("/orb/{namespace}/{orb}", s.generateSchema).Methods("GET")
+	// The path below is deprecated. Will be removed in a future release.
 	s.Router.HandleFunc("/{namespace}/{orb}", s.generateSchema).Methods("GET")
 
 	s.Router.Use(loggingMiddleware)
