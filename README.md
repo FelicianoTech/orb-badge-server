@@ -11,14 +11,14 @@ It may go away, and it may break as the Shields.io service is in beta.
 
 You show an `orb version` status badge with the following URL:
 
-`https://img.shields.io/badge/endpoint.svg?url=https://orb-badge.cci.feliciano.tech/<namespace>/<orb-name>`
+`https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/<namespace>/<orb-name>`
 
 where `<namespace>` is your Orb's namespace and `<orb-name>` is the name of the specific Orb.
 
 For example, here's a badge for the CircleCI AWS CLI Orb in Markdown with a link back to the Orbs page:
 
 ```
-[![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://orb-badge.cci.feliciano.tech/circleci/aws-cli)](https://circleci.com/orbs/registry/orb/circleci/aws-cli)
+[![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/circleci/aws-cli)](https://circleci.com/orbs/registry/orb/circleci/aws-cli)
 ```
 
 and here is how it render's: [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://orb-badge.cci.feliciano.tech/circleci/aws-cli)](https://circleci.com/orbs/registry/orb/circleci/aws-cli)
