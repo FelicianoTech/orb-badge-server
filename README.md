@@ -21,14 +21,14 @@ For example, here's a badge for the CircleCI AWS CLI Orb in Markdown with a link
 [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/circleci/aws-cli)](https://circleci.com/orbs/registry/orb/circleci/aws-cli)
 ```
 
-and here is how it render's: [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://orb-badge.cci.feliciano.tech/circleci/aws-cli)](https://circleci.com/orbs/registry/orb/circleci/aws-cli)
+and here is how it render's: [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/circleci/aws-cli)](https://circleci.com/orbs/registry/orb/circleci/aws-cli)
 
 
 ## Development
 
 This server is written in Go.
 Please use Go v1.11 or later.
-It may work with earlier versions but it untested.
+It may work with earlier versions but it's untested.
 
 ```
 go get -u github.com/felicianotech/orb-badge
@@ -40,15 +40,14 @@ The server will be available at `http://localhost:1107/`.
 ## Production
 
 There really isn't a production server right now.
-I am running a test/beta at https://orb-badge.cci.feliciano.tech.
+I am running a test/beta at https://badges.circleci.io.
 
-To run your own, in `main.go` change the port to '80' or use a proxy.
-Place the binary on a server and run it.
+To run your own, place the binary on a server and run it.
 If you use port 80, `sudo` will be needed for non-root users.
 
 ```
 go build ./...
-./orb-badge
+./orb-badge <port>
 ```
 
 Running the binary in something like tmux will make your life easier as well.
