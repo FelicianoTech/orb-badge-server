@@ -26,6 +26,8 @@ and here is how it render's: [![CircleCI Orb Version](https://img.shields.io/bad
 
 ## Development
 
+### Raw / Straight on local machine
+
 This server is written in Go.
 Please use Go v1.11 or later.
 It may work with earlier versions but it's untested.
@@ -35,7 +37,19 @@ go get -u github.com/felicianotech/orb-badge
 go run .
 ```
 
+### Docker
+
+If you don't have Go installed locally or just want to use Docker regardless:
+
+```
+git clone https://github.com/felicianotech/orb-badge-server
+cd orb-badge-server
+docker build -it dev/orb-badge-server # will show the server running in the terminal and stay attached
+docker build -it dev/orb-badge-server # will run the terminal in the background and return control
+```
+
 The server will be available at `http://localhost:1107/`.
+
 
 ## Production
 
