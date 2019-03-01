@@ -1,8 +1,15 @@
 version: 2.1
+orbs:
+  gke: felicianotech/test-gke@dev:testing-3
 workflows:
   main:
     jobs:
       - build
+      - gke/publish-and-rollout-image:
+          context: gcp-testing
+          deployment: orb-badge-server
+          image: orb-badge-server
+          tag: "2"
 jobs:
   build:
     docker:
@@ -23,7 +30,7 @@ jobs:
           command: mkdir -p $TEST_RESULTS/go-test
       - run:
           name: "Run Tests"
-          command: go test -v 2>&1 | tee >(go-junit-report > $TEST_RESULTS/go-test/report.xml)
+          command: go test -v 2>&1 | tee >(go-junit-report > $TEST_RESULTS/go-test/report.xml) 
       - save_cache:
           key: go-mod-v1-
           paths:

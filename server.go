@@ -49,7 +49,7 @@ func (s *Server) run(addr string) {
 
 func (s *Server) viewHomepage(w http.ResponseWriter, r *http.Request) {
 
-	respondWithError(w, 403, "Go away.")
+	respondWithError(w, 403, "Go away!")
 }
 
 func (s *Server) generateSchema(w http.ResponseWriter, r *http.Request) {
