@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"html/template"
 	"net/http"
 
 	"github.com/CircleCI-Public/circleci-cli/api"
@@ -49,7 +50,18 @@ func (s *Server) run(addr string) {
 
 func (s *Server) viewHomepage(w http.ResponseWriter, r *http.Request) {
 
-	respondWithError(w, 403, "Go away.")
+	tpl := template.Must(template.ParseFiles("tpl/main.css", "tpl/main.js", "tpl/index.html"))
+	tpl.ExecuteTemplate(w, "base", map[string]interface{}{
+		"username": "FelicianoTech",
+	})
+}
+
+func (s *Server) viewCSS(w http.ResponseWriter, r *http.Request) {
+
+	tpl := template.Must(template.ParseFiles("tpl/main.css"))
+	tpl.ExecuteTemplate(w, "base", map[string]interface{}{
+		"username": "FelicianoTech",
+	})
 }
 
 func (s *Server) generateSchema(w http.ResponseWriter, r *http.Request) {

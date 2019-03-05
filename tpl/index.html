@@ -1,0 +1,50 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+	{{- template "css" . -}}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/JavaScript">
+	{{- template "js" . -}}
+	</script>
+	<title>Orb Badge Server</title>
+</head>
+<body>
+	<h1>Orb Badge Server</h1>
+	<p>The Orb Badge Server is an experimental service provided to generate readme badges for your CircleCI Orbs. It is not an official CircleCI service. The source code for this server can be found <a href="https://github.com/felicianotech/orb-badge-server">here</a></p>
+
+	<h2>Examples</h2>
+	<p>Here's how the Orb Badges for the <code>circleci/slack</code> and <code>circleci/aws-cli</code> orbs look:</p>
+	<ul>
+		<li> Slack: <img src="https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/circleci/slack" />
+		<li> AWS CLI: <img src="https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/circleci/aws-cli" />
+	</ul>
+
+	<h2>Generate Badge</h2>
+	<p>Provide your orb namespace and name and we'll generate the Markdown necessary to display your Orb Badge.</p>
+
+	<form>
+		<div class="form-group">
+			<label for="namespace">Namespace:</label>
+			<input class="form-control" type="text" name="namespace" />
+		</div>
+		<div class="form-group">
+			<label for="name">Name:</label>
+			<input class="form-control" type="text" name="name" />
+		</div>
+		<button class="btn btn-primary" type="submit">Generate</button>
+		<hr />
+		<p>Generated Badge Markdown:</p>
+		<textarea class="form-control"></textarea>
+	</form>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+{{ end }}

@@ -1,0 +1,22 @@
+{{ define "css" }}
+body{
+	background-color: #DDDDDD;
+	padding: 50px 14%;
+	color: #566B78;
+}
+
+h1,
+h2,
+h3{
+	color: #333;
+}
+
+form{
+	max-width: 65%;
+}
+
+textarea.form-control{
+	height: 200px;
+}
+
+{{ end }}
