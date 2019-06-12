@@ -1,4 +1,4 @@
-# Orb Badge [![CircleCI Build Status](https://circleci.com/gh/felicianotech/orb-badge.svg?style=shield)](https://circleci.com/gh/felicianotech/orb-badge) [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/felicianotech/orb-badge/master/LICENSE)
+# Orb Badge Server [![CircleCI Build Status](https://circleci.com/gh/felicianotech/orb-badge-server.svg?style=shield)](https://circleci.com/gh/felicianotech/orb-badge-server) [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/felicianotech/orb-badge-server/master/LICENSE)
 
 Orb Badge is a mini Go server designed to provide a JSON endpoint for Shields.io's [custom badges](https://shields.io/#/endpoint).
 This allows Orb developers to use a status badge on their repo's readme file.
